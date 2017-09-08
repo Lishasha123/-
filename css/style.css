@@ -1,0 +1,158 @@
+body{
+	margin: 0px;
+	font-family: "arial, helvetica, sans-serif";
+	font-size: 14px;
+	background-color: white;
+}
+a{
+	text-decoration: none;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.w{
+	width: 1200px;
+	margin: 0px auto;
+	}
+.top{
+	width: 1430px;
+	height: 38px;
+	background-color: #535353;
+}
+.nav{
+	height: 38px;
+	min-width: 1200px;
+}
+.nav ul{
+	margin: 0px;
+	
+	line-height: 38px;
+	color: #ffffff;
+
+	
+}
+.nav ul li{
+	float: left;
+	list-style: none;
+	padding: 0px 20px;
+	
+}
+.nav ul li a{
+	color: #ffffff;
+}
+.nav ul li:hover{
+	background-color: white;
+}
+.nav ul li:hover a{
+	color: black;
+}
+.nav ul li:nth-child(2){
+	position: relative;
+}
+.nav ul li:nth-child(2) ul{
+	padding: 0px;
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 0px;
+	z-index: 9999;
+}
+.nav ul li:nth-child(2) ul li{
+	float: none;
+	width: 60px;
+}
+.nav ul li:nth-child(2) ul li a{
+	color: black;
+}
+.nav ul li:hover ul{
+	display: block;
+}
+.nav ul li:nth-child(2) ul li:hover{
+	background-color: papayawhip;
+}
+.nav ul li:nth-child(2) ul li:hover a{
+	color: red;
+}
+.box1{
+	height: 116px;
+	padding:23px 0px ;
+	box-sizing: border-box;
+	background-color: white;
+}
+.box1 .logo{
+	width: 222px;
+	height: 70px;
+}
+.box1 .logo img{
+	width: inherit;
+	height: inherit;
+}
+.box1 .wenzi{
+	height: 70px;
+	line-height: 70px;
+	margin-left: 40px;
+	color: #333333;
+}
+.box1 .tupian{
+	width: 608px;
+	height: 70px;
+	padding: 20px 0px;
+	box-sizing: border-box;
+}
+.box1 .tupian .box2{
+	margin-left:36px ;
+}
+.banner{
+	width: 1200px;
+	height: 340px;
+	position: relative;
+}
+.banner a{
+	display: block;
+	width:inherit;
+	height: inherit;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.banner a img{
+	width: inherit;
+	height: inherit;
+}
+.banner .points{
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+}
+.banner .points span{
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius:50%;
+	background-color: white;
+	margin: 0px 20px;
+	
+}
+.banner .points span.active{
+	background-color: red;
+}
+.box3{
+	height: 452px;
+	background-color: red;
+	margin-top: 40px;
+}
+.box3 .box3-1{
+	width: 218px;
+	height: inherit;
+	background-color: peru;
+}	
+

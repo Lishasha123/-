@@ -3,7 +3,121 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
+		<div class="top">
+		<div class="nav w">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">学院介绍</a>
+	              <ul>
+	              	<li><a href="#">学院简介</a></li>
+	              	<li><a href="#">学院简介</a></li>
+	              	<li><a href="#">学院简介</a></li>
+	              	<li><a href="#">学院简介</a></li>
+	              	<li><a href="#">学院简介</a></li>
+	              </ul>
+				</li>
+				<li><a href="#">学院介绍</a></li>
+				<li><a href="#">学院介绍</a></li>
+				<li><a href="#">学院介绍</a></li>
+				<li><a href="#">学院介绍</a></li>
+				<li><a href="#">学院介绍</a></li>
+				<li><a href="#">学院介绍</a></li>
+				<li><a href="#">学院介绍</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="box1 w">
+		<div class="logo left">
+			<img src="img/logo(1).png"/>
+		</div>
+		<div class="wenzi left">教育培训领先品牌</div>
+		<div class="tupian right">
+			<div class="box2 left">
+			<img src="img/首页_03.png" />
+			<span>源自名校</span>
+			</div>
+			<div class="box2 left">
+			<img src="img/2_05.png" />
+			<span>学院资质</span>
+			</div>
+			<div class="box2 left">
+			<img src="img/3_07.png" />
+			<span>专注12年</span>
+			</div>
+			<div class="box2 left">
+			<img src="img/4_10.png" />
+			<span>400-616-2336</span>
+			</div>
+		</div>
+	</div>
+	<div class="banner w">
+		<a href="#"><img src="img/201603231622547.jpg" /></a>
+		<a href="#"><img src="img/201610101628469.jpg" /></a>
+		<a href="#"><img src="img/201702081649028.jpg" /></a>
+		<a href="#"><img src="img/201702091426261.jpg" /></a>
+		<a href="#"><img src="img/201702091427415.jpg" /></a>
+		<a href="#"><img src="img/201702101151185.jpg" /></a>
+		<a href="#"><img src="img/201702270855564.jpg" /></a>
+		<a href="#"><img src="img/201706191500366.jpg" /></a>
+		<a href="#"><img src="img/201706191500366.jpg" /></a>
+		<a href="#"><img src="img/201709071603189.jpg" /></a>
+		<div class="points"></div>
+	</div>
+	<div class="box3 w">
+		<div class="box3-1 left">
+			<div class="num"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script type="text/javascript">
+		var banners=$(".banner");
+		var imgs=$(".banner a");
+		var count=imgs.length;
+		var index=0;
+		for(var i=0;i<count;i++){
+			$(".points").append("<span></span>");
+		};
+		var points=$(".points span");
+		$(".points").css("margin-left",(-1*count*30)+"px");
+		points.eq(0).addClass("active");
+		
+		imgs.hide().eq(0).show();
+		var t=setInterval(function(){
+			points.eq(index).removeClass("active");
+			imgs.eq(index).fadeOut(200);
+			index=(index+1)%count;
+			imgs.eq(index).fadeIn(200);
+			points.eq(index).addClass("active");
+		},1000);
+		
+		$(".banner").hover(function(){
+			clearInterval(t);
+		},function(){
+			t=setInterval(function(){
+			points.eq(index).removeClass("active");
+			imgs.eq(index).fadeOut(200);
+			index=(index+1)%count;
+			imgs.eq(index).fadeIn(200);
+			points.eq(index).addClass("active");
+		},1000);
+		});
+		
+		points.hover(function(){
+			var i=$(this).index();
+			imgs.eq(index).fadeOut(200);
+			points.eq(index).removeClass("active");
+			index=i;
+			imgs.eq(index).fadeIn(200);
+			points.eq(index).addClass("active");
+		});
+		
+		
+		
+		
+	</script>
 	</body>
 </html>
