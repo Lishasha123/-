@@ -1,6 +1,6 @@
 body{
 	margin: 0px;
-	font-family: "arial, helvetica, sans-serif";
+	font-family: "微软雅黑";
 	font-size: 14px;
 	background-color: white;
 }
@@ -22,6 +22,17 @@ clear:after{
 	width: 1200px;
 	margin: 0px auto;
 	}
+.left1{
+	width: 80px;
+	height: 435px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+	display: none;
+}	
+	
+	
 .top{
 	width: 1430px;
 	height: 38px;
@@ -68,6 +79,7 @@ clear:after{
 .nav ul li:nth-child(2) ul li{
 	float: none;
 	width: 60px;
+	background-color: white;
 }
 .nav ul li:nth-child(2) ul li a{
 	color: black;
@@ -147,12 +159,207 @@ clear:after{
 }
 .box3{
 	height: 452px;
-	background-color: red;
 	margin-top: 40px;
 }
 .box3 .box3-1{
 	width: 218px;
 	height: inherit;
-	background-color: peru;
+	border: solid 1px gainsboro; 
+	box-sizing: border-box;
+}
+.box3-1 .kecheng{
+	background-color: red;
+}
+.box3-1 .kecheng h2{
+	margin: 0px;
+	height: 52px;
+	line-height: 52px;
+	color: white;
+	font-size: 20px;
+	font-weight: 400;
+	border-bottom: solid 1px gainsboro;
+	box-sizing: border-box;
+	background-image: url(../img/重新支付.png);
+	background-size: 30px 30px; 
+	background-repeat:no-repeat;
+	text-align: center;
+	background-position:11px 11px ;
 }	
+.box3-1 ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	
+}
+.box3-1 ul li{
+	padding: 9px 15px;
+	border-bottom: solid 1px gainsboro;
+	box-sizing: border-box;
+}
+.box3-1 ul li:hover{
+	background-color: gainsboro;
+}
+.box3-1 ul li:hover a:first-child{
+	color: red;
+}
+.box3-1 ul li a:first-child{
+	color: black;
+	font-size: 16px;
+}
+.box3-1 ul li a{
+	display: inline-block;
+	color: gray;
+	margin-right: 20px;
+}
+.box3-1 ul li a:hover{
+	color: red;
+}
+.box3-2{
+	width: 700px;
+	height: inherit;
+	margin-left: 20px;
+	
+}
+.box3-2 .dongtai{
+	list-style: none;
+	height: 52px;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: solid 1px gainsboro;
+}
+.box3-2 .dongtai li{
+	float: left;
+	height: 52px;
+	line-height: 52px;
+	margin: 0px 20px;
+	font-size: 20px;
+}
+.box3-2 .dongtai li.active{
+	color: red;
+	border-bottom: solid 2px red;
+}
+.box3-2 .contents{
+	width: inherit;
+	height: 400px;
+	position: relative;
+}
+.box3-2 .contents-1{
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+.box3-2 .contents .contents-1:nth-child(1){
+	display: block;
+}
+/*.box3-2 .contents .contents-1:nth-child(2){
+	background-color: palevioletred;
+}
+.box3-2 .contents .contents-1:nth-child(3){
+	background-color: pink;
+}*/
+.box3-2 .contents-1 ul{
+	margin: 0px;
+	padding:0px;
+}
+.box3-2 .contents-1 li{
+	list-style-type: none;
+	width: 350px;
+	height: 70px;
+	margin-top: 20px;
+	float: left;
+	position: relative;
+}
+.box3-2 .contents-1 img{
+	width: 50px;
+	height: 50px;
+	border-radius:50% ;
+}
+.box3-2 .contents-1 span{
+	display: block;
+	width: 50px;
+	height: 20px;
+	color: #999;
+	text-align: center;
+}
+.box3-2 .contents-1 li .num1{
+	width: 280px;
+	height: inherit;
+	padding-right: 10px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 14px;
+	text-align: justify;
+	
+}
+.box3-2 .contents-1 li .num1 a{
+	color: gray;
+	display: block;
+}
+.box3-2 .contents-1 li .num1 a:first-child{
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: black;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.box3-2 .contents-1 li .num1 a:first-child:hover{
+	color: red;
+}
+.box3 .box3-3{
+	width: 200px;
+	height: inherit;
+}
+.box3-3 p{
+	height: 52px;
+	width: inherit;
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+	line-height: 52px;
+	text-align: center;
+}
+.box3-3 .imgas{
+	width: inherit;
+	height: 120px;
+	position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.box3-3 .imgas img{
+	width: 200px;
+	height: 120px;
+}
+.box3-3 .imgas .move{
+	height: 80px;
+	width: inherit;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 90px;
+	left: 0px;
+}
+.box3-3 .imgas .move h3{
+	margin: 5px 20px 5px 10px;
+}
+.box3-3 .imgas .move h3 a{
+	color:white;
+	font-size: 14px;
+}
+.box3-3 .imgas .move p{
+	height: 20px;
+	line-height: 20px;
+	padding: 0px;
+	text-align: left;
+	padding: 0px 10px;
+	box-sizing: border-box;		
+}
+.box3-3 .imgas .move p a{
+	color: #afafaf;
+	font-size: 12px;
+}
 
