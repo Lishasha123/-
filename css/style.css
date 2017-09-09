@@ -13,7 +13,7 @@ a{
 .right{
 	float: right;
 }
-clear:after{
+.clear:after{
 	content: "";
 	display: block;
 	clear: both;
@@ -234,6 +234,9 @@ clear:after{
 	margin: 0px 20px;
 	font-size: 20px;
 }
+.box3-2 a{
+	color: #000000;
+}
 .box3-2 .dongtai li.active{
 	color: red;
 	border-bottom: solid 2px red;
@@ -246,6 +249,7 @@ clear:after{
 .box3-2 .contents-1{
 	width: inherit;
 	height: inherit;
+	margin-top: 10px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -363,3 +367,142 @@ clear:after{
 	font-size: 12px;
 }
 
+.box4{
+/*	height: 900px;*/
+	margin-top: 40px;
+/*	background-color: #000000;*/
+}
+.box4 .box4-1{
+	height: 51px;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: solid 1px gainsboro;
+}
+.box4 .box4-1 h2{
+	display: inline-block;
+	margin: 12px 0px;
+}
+.box4 .box4-1 ul{
+	float: right;
+	margin: 0px;
+
+}
+.box4 .box4-1 li{
+	list-style: none;
+	float: left;
+	height: 52px;
+	padding: 15px 20px;
+	box-sizing: border-box;
+}
+.box4 .box4-1 a{
+	color: #000000;
+	font-size:16px;
+}
+.box4 .box4-1 li.active{
+	border-bottom: solid 2px red ;
+	color: red;
+}
+.box4 .main{
+	margin-top: 28px;
+	position: relative;
+}
+.box4 .main-1{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+.box4 .main-1:first-child{
+	display: block;
+}
+.box4 .box4-2{
+	width: inherit;
+/*	margin-top: 28px;*/
+}
+.box4 .box4-2 ul{
+	margin: 0px;
+	padding: 0px;
+}
+.box4 .box4-2 li{
+	list-style: none;
+	height: 240px;
+	width: 270px;
+	padding: 8px;
+	margin-right: 16px;
+	float: left;
+}
+.box4 .box4-2 li:hover{
+		border: solid 1px gainsboro;
+}
+.box4 .box4-2 li:last-child{
+	margin-right: 0px;
+}
+/*.box4 .box4-2 .top1{
+	width: 270px;
+	height: 180px;
+}*/
+.box4 .box4-2 .top1{
+	width: 270px;
+	height: 180px;
+	overflow: hidden;
+	position: relative;
+}
+.box4 .box4-2 .top1 img{
+	width: 270px;
+	height: 180px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.box4 .box4-2 .top2 span:first-child{
+	display: block;
+	margin-bottom: 15px;
+}
+.box4 .box4-2 .top2 a:first-child{
+	color: black;
+}	
+.box4 .box4-2 .top2 a:first-child:hover{
+	color: red;
+}
+.box4 .box4-2 .top2 .jiage{
+	color: gray;
+}
+.box4 .box4-2 .top2 a:last-child{
+	color: gray;
+	display: inline-block;
+	margin-left: 140px;
+}
+.box4 .box4-2 .top2 a:last-child:hover{
+	color: palegreen;
+}
+ .box4 .school{
+	margin-top: 28px;
+	height: 300px;
+	position: relative;
+}
+.box4 .school-1{
+	width: 592px;
+	height: inherit;
+}
+.box4 .school-1 table{
+	width: inherit;
+	height: inherit;
+}
+.box4 .school-1 table tr td:first-child{
+	text-align: left;
+	font-size: 18px;
+}
+.box4 .school-1 table th{
+	font-size: 16px;
+	font-weight: 400;
+}
+.box4 .right1{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.box4 .baoming{
+	height: 52px;
+	border-bottom: solid 1px gainsboro;
+	background-color: #000000;
+}
