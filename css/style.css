@@ -368,9 +368,8 @@ a{
 }
 
 .box4{
-/*	height: 900px;*/
+	height: 660px;
 	margin-top: 40px;
-/*	background-color: #000000;*/
 }
 .box4 .box4-1{
 	height: 51px;
@@ -501,8 +500,113 @@ a{
 	top: 0px;
 	right: 0px;
 }
-.box4 .baoming{
-	height: 52px;
+ .baoming{
+	height: 40px;
+	width: 1200px
 	border-bottom: solid 1px gainsboro;
-	background-color: #000000;
+	position: relative;
+	overflow: hidden;
+}
+.baoming .leftA{
+	width: 100px;
+	height: 39px;
+	line-height: 39px;
+	border-bottom: solid 2px red;
+	position: absolute;
+	z-index: 9999;
+	background-color: white;
+}
+.baoming .leftB{
+	width: 1100px;
+	height: 40px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	line-height: 40px;
+}
+.baoming .leftB span{
+	margin: 0px 10px;
+	white-space: nowrap;
+	font-size: 16px;
+	
+}
+.baoming .leftB .first1{
+	margin-right: 50px;
+}
+.teachers{
+	height: 400px;
+	margin-top: 40px;
+	position: relative;
+   overflow: hidden;
+}
+.teachers .tops{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: solid 1px gainsboro;
+	position: relative;
+}
+.teachers .tops h2{
+  padding: 0px;
+  margin: 0px;
+}
+.teachers .tops .sanjiao1{
+	width: 0px;
+	height: 0px;
+	background-color: red;
+	border: solid 5px white;
+	border-left:solid 5px red;
+	position: absolute;
+	top: 15px;
+	right: 90px;
+} 
+.teachers .tops .sanjiao2{
+	width: 0px;
+	height: 0px;
+	background-color: red;
+	border: solid 5px white;
+	border-right:solid 5px red;
+	position: absolute;
+	top: 15px;
+	right: 110px;
+}
+/*.teachers .tops p:hover a{
+	color: red;
+}*/
+.teachers ul{
+	margin: 0px;
+	padding: 0px;
+	padding-top: 10px;
+	position: absolute;
+	width: 3720px;
+}
+.teachers ul li{
+	list-style: none;
+	width: 270px;
+	height: 300px;
+	margin-right: 40px;
+	float: left;
+	position: relative;
+	background-color: palevioletred;
+}
+.teachers ul li img{
+	width: 270px;
+	height: 200px;
+}
+.teachers ul li .imgs{
+	width: 270px;
+	height: 200px;
+	background-color: rgba(0,0,0,0.6);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	
+}
+.teachers ul li .imgs p{
+	color: white;
+	text-align: justify;
+	padding: 20px 10px;
+}
+.teachers ul li:hover .imgs{
+	display: block;
 }
