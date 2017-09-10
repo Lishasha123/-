@@ -380,6 +380,7 @@ a{
 .box4 .box4-1 h2{
 	display: inline-block;
 	margin: 12px 0px;
+	padding: 0px;
 }
 .box4 .box4-1 ul{
 	float: right;
@@ -465,11 +466,13 @@ a{
 }
 .box4 .box4-2 .top2 .jiage{
 	color: gray;
+	display: inline-block;
 }
 .box4 .box4-2 .top2 a:last-child{
 	color: gray;
 	display: inline-block;
-	margin-left: 140px;
+	margin-left: 110px;
+    
 }
 .box4 .box4-2 .top2 a:last-child:hover{
 	color: palegreen;
@@ -534,7 +537,7 @@ a{
 	margin-right: 50px;
 }
 .teachers{
-	height: 400px;
+    height: 370px;
 	margin-top: 40px;
 	position: relative;
    overflow: hidden;
@@ -553,21 +556,21 @@ a{
 	width: 0px;
 	height: 0px;
 	background-color: red;
-	border: solid 5px white;
-	border-left:solid 5px red;
+	border: solid 10px white;
+	border-left:solid 10px red;
 	position: absolute;
-	top: 15px;
+	top: 10px;
 	right: 90px;
 } 
 .teachers .tops .sanjiao2{
 	width: 0px;
 	height: 0px;
 	background-color: red;
-	border: solid 5px white;
-	border-right:solid 5px red;
+	border: solid 10px white;
+	border-right:solid 10px red;
 	position: absolute;
-	top: 15px;
-	right: 110px;
+	top: 10px;
+	right: 120px;
 }
 /*.teachers .tops p:hover a{
 	color: red;
@@ -586,7 +589,6 @@ a{
 	margin-right: 40px;
 	float: left;
 	position: relative;
-	background-color: palevioletred;
 }
 .teachers ul li img{
 	width: 270px;
@@ -609,4 +611,104 @@ a{
 }
 .teachers ul li:hover .imgs{
 	display: block;
+}
+.box5{
+	height: 400px;
+	margin-top: 40px;
+	background-color: palegoldenrod;
+}
+.box5 .box5-1{
+	height: 52px;
+	line-height: 52px;
+	position: relative;
+	background-color: peru;
+}
+.box5 .box5-1 h2{
+	margin: 0px;
+	padding: 0px;
+}
+.box5 .box5-1 span{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+.box5 .box5-2{}
+
+.box6{
+	margin-top: 40px;
+	background-color: palegoldenrod;
+}
+.box6 .box6-1{
+	height: 52px;
+	line-height: 52px;
+}
+.box6 .box6-1 h2{
+	margin: 0px;
+	padding: 0px;
+}
+.box6 .box6-2 ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.box6 .box6-2 li{
+	width: 300px;
+	line-height: 24px;
+	text-align: center;
+	color: #535353;
+	float: left;
+	margin-bottom: 15px;
+}
+
+.box6 .box6-2 li img{
+	width: 270px;
+	height: 170px;
+	margin: 15px;
+}
+.box7{
+	margin-top: 40px;
+	background-color: palegreen;
+}
+ .box7 .box7-1{
+ 	height: 52px;
+ 	line-height: 52px;
+ }
+.box7 .box7-1 h2{
+	margin: 0px;
+	padding: 0px;
+}
+.box7 ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.box7 ul li{
+	width: 300px;
+	padding: 10px;	
+	box-sizing: border-box;
+	float: left;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+.box7 ul li .tip1{
+	float: left;
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px 10px;
+}
+.box7 ul li .line{
+	float: left;
+	height: 40px;
+	margin-top: 4px;
+	border-right:solid 1px gainsboro ;
+}
+.box7 ul li .wen{
+	float: left;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px 10px;
+}
+.box7 ul li .wen p{
+	padding: 0px;
+	margin: 0px;
 }
