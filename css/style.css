@@ -29,7 +29,6 @@ a{
 	top: 0px;
 	left: 0px;
 	z-index: 9999;
-	display: none;
 }	
 	
 	
@@ -743,7 +742,6 @@ a{
 }
 .box6{
 	margin-top: 40px;
-	background-color: palegoldenrod;
 }
 .box6 .box6-1{
 	height: 52px;
@@ -774,7 +772,6 @@ a{
 }
 .box7{
 	margin-top: 40px;
-	background-color: palegreen;
 }
  .box7 .box7-1{
  	height: 52px;
@@ -783,6 +780,7 @@ a{
 .box7 .box7-1 h2{
 	margin: 0px;
 	padding: 0px;
+	color: black;
 }
 .box7 ul{
 	list-style: none;
@@ -820,43 +818,148 @@ a{
 	margin: 0px;
 }
 .box8{
-	height: 300px;
 	margin-top: 40px;
-	background-color: peachpuff;
 }
 .box8 .box8-1{
 	height: 52px;
 	line-height: 52px;
-	background-color: palevioletred;
 }
 .box8 h2{
 	margin: 0px;
 	padding: 0px;
-	color: black;
 }
 .box8 .tem{
-	background-color: peru;
-	margin-top: 10px;
-   overflow: hidden;
+	width: 1120px;
+	float: left;
+	margin-top: 10px;	
+    overflow: hidden;
 }
 .box8 .tem ul{
 	margin: 0px;
-	width: 4000px;
-	
+	padding: 0px;
+   position: relative;
 }
 .box8 .tem li{
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
 	float: left;
-	width:170px;
+	width:170px;/*172*/
 	height: 80px;
-	margin-left: ;
-	
+	margin-right:20px ;
 	border: solid 1px gainsboro;
 	
 }
 .box8 .tem li img{
 	width: 170px;
 	height: 80px;
+}
+.box8 .box8-2 .left3{
+	width:34px;
+	height: 80px;
+	margin-top: 10px;
+    font-size: 30px;
+    line-height: 80px;
+}
+.box8 .box8-2 .left3:hover{
+	background-color: gainsboro;
+}
+.footer{
+	width: 100%;
+	min-width: 1200px;
+	background-color: #f3f3f3;
+	margin-top: 40px;
+}
+.box9{
+	height: inherit;
+}
+.box9 #first{
+	margin: 0px;
+	padding: 0px;
+	padding: 30px 0px;
+	list-style: none;
+	border-bottom: solid 1px gainsboro;
+}
+.box9 #first li{
+	width: 200px;
+	padding-right: 20px;
+	box-sizing: border-box;
+	font-size: 16px;
+	float: left;
+}
+.box9 #first li img{
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-right: 10px;
+}
+.box9 #first li span{
+	font-size: 12px;
+	color: #999999;
+}
+.box9 .mains{
+	margin-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: solid 1px gainsboro;
+}
+.box9 .box9-1{
+	width: 1000px;
+	float: left;
+	
+}
+.box9 .box9-1 ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	line-height: 24px;
+}
+.box9 .box9-1  li.left4{
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	margin-right: 78px;
+}
+.box9 .box9-1 li ul li:first-child{
+	font-size: 16px;
+}
+.box9 .box9-1 li ul li a{
+	color: #999999;
+}
+.box9 .box9-1 li ul li a:hover{
+	color: red;
+}
+
+.box9  .mains .box9-2{
+	margin-top: 30px;
+	font-size: 12px;
+	line-height: 24px;
+}
+.box9 .mains .box9-2 p{
+	color: rgb(128,128,128);
+}
+.box9 .mains .box9-2 a{
+	color: rgb(128,128,128);
+}
+.box9 .mains .box9-3{
+	width: 200px;
+	float:left;
+
+	}
+/*.box9 .mains .box9-3 img{
+	width: 97px;
+	height: 97px;
+}*/
+.box9 .mains .box9-3 p{
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	line-height: 24px;
+}
+.box9 .mains .box9-3 .ts{
+	font-size: 22px;
+	line-height: 30px;
+}
+.box9 .bottom{
+	text-align: center;
+	line-height: 30px;
 }
