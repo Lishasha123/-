@@ -160,12 +160,14 @@ a{
 .box3{
 	height: 452px;
 	margin-top: 40px;
+	
 }
 .box3 .box3-1{
 	width: 218px;
 	height: inherit;
 	border: solid 1px gainsboro; 
 	box-sizing: border-box;
+	position: relative;
 }
 .box3-1 .kecheng{
 	background-color: red;
@@ -185,34 +187,65 @@ a{
 	text-align: center;
 	background-position:11px 11px ;
 }	
-.box3-1 ul{
+.box3-1 .left2{
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
 	
 }
-.box3-1 ul li{
+.box3-1 .left2 li{
 	padding: 9px 15px;
 	border-bottom: solid 1px gainsboro;
 	box-sizing: border-box;
 }
-.box3-1 ul li:hover{
+.box3-1 .left2 li.active{
 	background-color: gainsboro;
 }
-.box3-1 ul li:hover a:first-child{
+.box3-1 .left2 li.active a:first-child{
 	color: red;
 }
-.box3-1 ul li a:first-child{
+.box3-1 .left2 li a:first-child{
 	color: black;
 	font-size: 16px;
 }
-.box3-1 ul li a{
+.box3-1 .left2 li a{
 	display: inline-block;
 	color: gray;
 	margin-right: 20px;
 }
-.box3-1 ul li a:hover{
+.box3-1 .left2 li a:hover{
 	color: red;
+}
+.box3 .menu{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	top: 52px;
+	left: 220px;
+	z-index: 9999;
+}
+.box3 .menu .menu1{
+	width: inherit;
+	height: inherit;
+	position:absolute ;
+	top: 0px;
+	left: 0px;
+	background-color:papayawhip;
+	display: none;
+}
+.box3-1 .menu1 .menu2{
+	margin: 0px;
+	padding: 0px;
+}
+.box3-1 .menu1 .menu2 li{
+	list-style: none;
+	border-top: solid 1px gainsboro;
+	width: 280px;
+	box-sizing: border-box;
+	padding: 15px;
+	margin-left: 20px;
+	margin-top: 20px;
+	float: left;
 }
 .box3-2{
 	width: 700px;
@@ -613,15 +646,13 @@ a{
 	display: block;
 }
 .box5{
-	height: 400px;
+/*   height: 400px;*/
 	margin-top: 40px;
-	background-color: palegoldenrod;
 }
 .box5 .box5-1{
 	height: 52px;
 	line-height: 52px;
 	position: relative;
-	background-color: peru;
 }
 .box5 .box5-1 h2{
 	margin: 0px;
@@ -632,8 +663,77 @@ a{
 	top: 0px;
 	right: 10px;
 }
-.box5 .box5-2{}
+.box5 .box5-2{
+    background-color: palevioletred;
+}
+.box5 .box5-2 .box5-3{
+	width: 1100px;
+	margin-top: 30px;
+	margin-bottom:30px ;
+	float: left;
 
+}
+.box5 .box5-2 .box5-3 ul{
+	margin: 0px;
+	padding: 0px;
+
+}
+.box5 .box5-2 .box5-3 ul li{
+	list-style: none;
+	float: left;
+	width: 33.3%;
+	position: relative;
+}
+.box5 .box5-2 .box5-3 ul li img{
+	width: 115px;
+	height: 115px;
+	border-radius:50% ;
+	margin-top: 30px;
+}
+.box5 .box5-2 .box5-3 ul li span{
+	display: block;
+	width: 115px;
+	text-align: center;
+}
+.box5 .box5-2 .box5-3 .texts{
+	float: right;
+	margin: 0px 30px 0px 120px;
+	line-height: 24px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.box5 .box5-2 .box5-3 .texts .texts1{
+	margin-bottom: 15px;
+}
+.box5 .box5-2 .box5-3 .texts .texts2{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.box5 .box5-2 .box5-3 .texts a{
+	color: gray;
+}
+.box5 .box5-2 .btn1{
+	width: 45px;
+	height: 60px;
+	margin-left: 5px;
+	float: left;
+	margin-top: 90px;
+	font-size: 40px;
+	color: gray;
+}
+.box5 .box5-2 .btn2{
+	width: 45px;
+	height: 60px;
+	margin-right: 5px;
+	float: right;
+	margin-top: 90px;
+	font-size: 40px;
+	color: gray;
+}
+.box5 .box5-2 .btn1:hover,.box5 .box5-2 .btn2:hover{
+		background-color: peachpuff;
+}
 .box6{
 	margin-top: 40px;
 	background-color: palegoldenrod;
