@@ -2494,7 +2494,7 @@
     	<a href="#" style="color: #000000;"><span>看全部</span></a>
     	</div> 
     <div class="box5-2 w clear">
-    	<a href="#"><div class="btn1"><</div></a>
+    	<div class="btn1"><</div>
     	<div class="box5-3">
     		<ul class="clear">
     			<li>
@@ -2632,7 +2632,7 @@
 
     		</ul>
     	</div>
-    		<a href="#"><div class="btn2">></div></a>
+    		<div class="btn2">></div>
   </div>
 </div>    
     
@@ -2946,6 +2946,7 @@
     <script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js" ></script>
 	<script type="text/javascript">
+		$(document).ready(function(){
 		//左侧边滚动
 		$(document).scroll(function(){
 			var H=$(window).height();
@@ -2988,6 +2989,7 @@
 		
 		points.hover(function(){
 			var i=$(this).index();
+			$(":animated").stop(true, true);
 			imgs.eq(index).fadeOut(200);
 			points.eq(index).removeClass("active");
 			index=i;
@@ -3077,10 +3079,11 @@
 			});
 			}else{
 			$(".teachers ul").animate({left:p*-1*(widths+40)+"px"},1000);}
-		},5000);
+		},2000);
 
 		$(".teachers").hover(function(){
 			clearInterval(times);
+			console.log(p);
 		},function(){
 			times= setInterval(function(){
 			p=(p+1)%(geshu/4);
@@ -3090,16 +3093,16 @@
 			});
 			}else{
 			$(".teachers ul").animate({left:p*-1*(widths+40)+"px"},1000);}
-		},4000);
+		},2000);
 		});
 		//向右
-		$(".sanjiao1").click(function(){
+		$(" .tops .sanjiao1").click(function(){
 			p=(p+1)%(geshu/4);
 			console.log(p);
 			$(".teachers ul").css("left",p*-1*(widths+40)+"px");
 		});
 		//向左
-		$(".sanjiao2").click(function(){
+		$(" .tops .sanjiao2").click(function(){
 			p=(p-1+(geshu/4))%(geshu/4);
 			console.log(p);
 			$(".teachers ul").css("left",p*-1*(widths+40)+"px");
@@ -3127,7 +3130,7 @@
 		     $(".box5 .box5-3 ul").append(imgas3);
 		     $(".box5 .box5-3 ul").width(width2*(lengths+3)/3);
 		   
-		    var T= setInterval(function(){
+		    var newtime=setInterval(function(){
 		     	z=(z+1)%(lengths/3);
 		     	 if(z==0){
 		     		$(".box5 .box5-3 ul").animate({left:-1*(lengths/3)*width2+"px"},2000,function(){
@@ -3135,8 +3138,9 @@
 		     		});
 		     	}else{$(".box5 .box5-3 ul").animate({left:-1*z*width2+"px"},2000)};
 		     		 },4000);
-		     $(".box5-2").hover(function(){
-		     	clearInterval(T);
+		     		 
+		     $(".box5").hover(function(){
+		     	clearInterval(newtime);
 		     },function(){
 		     	setInterval(function(){
 		     	z=(z+1)%(lengths/3);
@@ -3147,6 +3151,16 @@
 		     	}else{$(".box5 .box5-3 ul").animate({left:-1*z*width2+"px"},2000)};
 		     		 },4000);
 		     });
+		     
+		     $(".box5-2 .btn1").click(function(){
+		     	 z=(z-1+(lengths/3))%(lengths/3);
+		     	 $(".box5 .box5-3 ul").css("left",-1*z*width2+"px");
+		     });
+		     $(".box5-2 .btn2").click(function(){
+		     	 z=(z+1)%(lengths/3);
+		     	 $(".box5 .box5-3 ul").css("left",-1*z*width2+"px");
+		     });
+		     
 		     
 		     //企业合作
 		     var num3=0;
@@ -3159,7 +3173,7 @@
 		     	 $(".box8-2 .tem ul").animate({left:-172*num3+"px"},1000,"easeOutBounce");
 		     },1000);
 		    
-		     		 
+		 });  		 
 	</script>
 	</body>
 </html>

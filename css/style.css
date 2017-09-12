@@ -548,7 +548,7 @@ a{
 	line-height: 39px;
 	border-bottom: solid 2px red;
 	position: absolute;
-	z-index: 9999;
+	z-index: 3;
 	background-color: white;
 }
 .baoming .leftB{
@@ -663,7 +663,7 @@ a{
 	right: 10px;
 }
 .box5 .box5-2{
-    background-color: palevioletred;
+/*    background-color: palevioletred;*/
     
 }
 .box5 .box5-2 .box5-3{
@@ -727,6 +727,7 @@ a{
 	margin-top: 90px;
 	font-size: 40px;
 	color: gray;
+	
 }
 .box5 .box5-2 .btn2{
 	width: 45px;
@@ -739,6 +740,7 @@ a{
 }
 .box5 .box5-2 .btn1:hover,.box5 .box5-2 .btn2:hover{
 		background-color: peachpuff;
+		cursor: pointer;
 }
 .box6{
 	margin-top: 40px;
