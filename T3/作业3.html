@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.main{
+				width: 800px;
+				height: 600px;
+				margin: 100px auto;
+				background-color: pink;
+			}
+			.main .music{
+				float: left;
+				width: 400px;
+				height: 600px;
+				background-color: palegreen;
+			}
+		
+			.main .music .imgs{
+				width: 200px;
+				height: 200px;
+				margin: 50px 100px;
+				border-radius: 50%;
+			   border: dotted 8px red;
+				box-shadow: 0px 0px 20px 1px;
+				position: relative;
+				-webkit-animation:image-rotate 10s linear infinite ;
+				-webkit-animation-play-state:paused ;
+			}
+			.main .music .imgs img{
+				width: inherit;
+				height: inherit;
+				border-radius: 50%;
+			}
+			.main #star{
+				width: 400px;
+				height: 60px;
+				text-align: center;
+				font-size: 20px;
+			
+				
+			}
+	
+			.main .time{
+				width: 200px;
+				margin: 100px 100px 0px 100px;
+				text-align: center;
+			}
+			.main .time input{
+				width: 200px;
+			}
+			.main .time p{
+				margin: 0px;	
+				font-size: 20px;
+			
+			}
+			
+			.main .control{
+				width: 200px;
+				height: 40px;
+				margin: 30px 100px;
+				padding: 0px 44px;
+			}
+			.main .control .btn{
+				margin: 0px 10px;
+				float: left;
+				position: relative;
+				background-image: url(media/ico_btn_player.png);
+			}
+			.main .control .btn-prev{
+				width: 16px;
+				height: 18px;
+				top: 3px;
+				background-position: -90px 0px ;
+			}
+			.main .control .btn-play{
+				width: 20px;
+				height: 24px;
+				background-position: -90px -60px;
+			}
+			.main .control .btn-next{
+				width: 16px;
+				height: 18px;
+				top: 3px;
+				background-position: -90px -30px;
+			}
+			.main .control .btn-pause{
+				width: 20px;
+				height: 24px;
+				background-position: -90px -90px;
+			}
+			
+		.main .name{
+				float: right;
+				width: 350px;
+				height: 400px;
+				margin-top: 100px;
+				background-color: peru;
+			}
+		.main .name	.tem:first-child{
+			font-size: 24px;
+			color: blue;
+			}	
+		.main .name	.tem{
+			width: inherit;
+			height: 40px;
+			background-color: peachpuff;
+			line-height: 40px;
+			font-size: 20px;
+			margin-bottom: 10px;
+			}
+			
+			  @-webkit-keyframes image-rotate{
+				from{
+					-webkit-transform: rotate(0deg);
+				}
+				to{
+					-webkit-transform: rotate(359deg);
+				}
+		</style>
+	</head>
+	<body>
+		<audio id="mp3">
+			<source src="media/小苹果.mp3" type="audio/mp3"></source>
+		</audio>
+		
+		<div class="main">
+			<div class="music">
+				
+				<div class="imgs">
+					<img src="media/筷子兄弟.jpeg">
+				</div>
+				
+				<div id="star">
+				小苹果/筷子兄弟
+				</div>
+				
+				<div class="time">
+					<input type="range" name="range" id="range" value="0" />
+					<p class="ts">00:00/00:00</p>
+				</div>
+				<div class="control">
+					<div class="btn btn-prev"></div>
+					<div class="btn btn-play"></div>
+					<div class="btn btn-next"></div>
+				</div>
+			</div>
+			<div class="name">
+				<div class="tem">最新歌曲</div>
+				<div class="tem">筷子兄弟--小苹果 
+					<span style="float: right;">04:21</span>
+				</div>
+					<div class="tem">祁隆--人生路 
+					<span style="float: right;">04:21</span>
+				</div>
+					<div class="tem">李玉刚 --刚好遇见你
+					<span style="float: right;">04:21</span>
+				</div>
+					<div class="tem">五月天--突然好像你 
+					<span style="float: right;">04:21</span>
+				</div>
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var num=[{music:"小苹果.mp3",img:"筷子兄弟.jpeg",name:"小苹果/筷子兄弟"},{music:"人生路.mp3",img:"人生路.jpg" ,name:"人生路/祁隆"},{music:"刚好遇见你.mp3",img:"刚好遇见你.jpg",name:"刚好遇见你/李玉刚"},{music:"突然好想你.mp3",img:"3479651571.jpg",name:"突然好想你/五月天"}];
+			var mp3=document.getElementById("mp3");
+			var imgas=document.getElementsByClassName("imgs")[0];
+			var names=document.getElementById("star");
+			var btnplay=document.getElementsByClassName("btn-play")[0];
+			var prev=document.getElementsByClassName("btn-prev")[0];
+			var next=document.getElementsByClassName("btn-next")[0];
+			var ts=document.getElementsByClassName("ts")[0];
+			var range=document.getElementById("range");
+			var index=0;
+			var count=num.length;
+			btnplay.onclick=function(){
+				if(mp3.paused){
+					mp3.play();
+					imgas.style.webkitAnimationPlayState="running";
+					btnplay.setAttribute("class","btn btn-pause");
+				}else{
+					mp3.pause();
+					imgas.style.webkitAnimationPlayState="paused";
+					btnplay.setAttribute("class","btn btn-play");
+				}
+			};
+			
+			prev.onclick=function(){
+				mp3.pause();
+				index=(index-1+count)%count;
+				names.innerText=num[index].name;
+				mp3.src="media/"+num[index].music;
+				imgas.children[0].setAttribute("src","media/"+num[index].img);
+				mp3.currentTime=0;
+				mp3.play();
+			};
+				next.onclick=function(){
+				mp3.pause();
+				index=(index+1)%count;
+				names.innerText=num[index].name;
+				mp3.src="media/"+num[index].music;
+				imgas.children[0].setAttribute("src","media/"+num[index].img);
+				mp3.currentTime=0;
+				mp3.play();
+			};
+			
+			
+			var t=setInterval(function(){
+				var longd=mp3.duration;
+				var longc=mp3.currentTime;
+				if(!mp3.paused);
+				    {range.value=longc/longd*100;}
+				var dm=Math.floor(longd/60);
+				var ds=Math.floor(longd%60);
+				var cm=Math.floor(longc/60);
+				var cs=Math.floor(longc%60);
+				 dm=dm<10?"0"+dm:dm; 
+				 ds=ds<10?"0"+ds:ds; 
+				 cm=cm<10?"0"+cm:cm; 
+				 cs=cs<10?"0"+cs:cs; 
+				  
+				  
+				ts.innerText=cm+":"+cs+"/"+dm+":"+ds;
+				
+				
+				
+				
+				
+			});
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
