@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<audio id="music" controls="controls">
+			<source src="media/小苹果.mp3" type="audio/mp3"></source>
+		</audio>
+		<script type="text/javascript">
+			
+		var	music=document.getElementById("music");
+		    music.play();
+		    
+			setInterval(function(){
+				music.pause();
+				console.log(music.paused); //是否暂停
+				console.log(music.duration); //音乐总时长
+				console.log(music.currentTime); //当前播放时长
+			},5000);
+			
+		</script>
+	</body>
+</html>

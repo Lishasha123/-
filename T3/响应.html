@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0px;
+			}
+			.container{
+				width: 1024px;
+			    margin: 0px auto;
+			}
+			.container > *{
+				margin-bottom: 20px;
+			}
+			.left{
+				float: left;
+			}
+			.right{
+				float: right;
+			}
+			.clear:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			nav{
+				width: 1024px;
+				height: 100px;
+
+			}
+			 nav .box{
+				width: 500px;
+				height: 100px;
+				background-color: peachpuff;
+			}
+			header{
+				width: 1024px;
+				height: 300px;
+				background-color: palevioletred;
+			}
+			article section{
+				width: 335px;
+				height: 330px;
+				float: left;
+				margin-right: 8px;
+				background-color: gray;
+			}
+			article section:last-child{
+				margin-right: 0px;
+			}
+			footer .tem{
+				width: 250px;
+				height: 150px;
+				float: left;
+				margin-right: 8px;
+				background-color: darkgrey;
+			}
+	        footer .tem:last-child{
+	        	margin-right: 0px;
+	        }
+		@media (max-width: 1024px) {
+			
+			.container{
+				width: 100%;
+			}
+			nav .box{
+				width: 100%;
+				margin-bottom: 10px;
+				
+			}
+			
+			article section{
+				width: 100%;
+				height: 200px;
+				margin-right: 0px;
+				margin-bottom: 10px;
+			}
+			footer .tem{
+				width: 49%;
+				margin-right: 0px;
+				margin-bottom: 10px;
+			}
+			footer .tem:nth-child(2n){
+				float: left;
+			}
+			footer .tem:nth-child(2n+1){
+				float: right;
+			}
+			
+		}
+		@media (max-width: 768px) {
+	
+			footer .tem{
+				width: 100%;
+			margin: 10px 0px;
+			float: none;
+			}
+		
+			
+		}
+				
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+	       <nav class="clear">
+	       	<div class="box left"></div>
+	       	<div class="box right"></div>
+	       </nav>
+	       <header></header>
+	       <article class="clear">
+	       	<section></section>
+	       	<section></section>
+	       	<section></section>
+	       </article>
+	       <footer class="clear">
+	       	<div class="tem"></div>
+	       	<div class="tem"></div>
+	       	<div class="tem"></div>
+	       	<div class="tem"></div>
+	       </footer>
+		</div>
+	</body>
+</html>
