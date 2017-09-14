@@ -5,16 +5,16 @@
 		<title></title>
 		<style type="text/css">
 			body{margin: 0px;}
-			.box{
+			ul li{
 				width: 100px;
 				height: 100px;
 				float: left;
 				margin: 10px;
-				
+				list-style: none;
 			}
 			.box1{
 				width: 90%;
-				height: 200px;
+				height: 400px;
 				position: fixed;
 				bottom: 10px;
 				left:5%;
@@ -24,7 +24,13 @@
 		</style>
 	</head>
 	<body>
-		
+		<ul>
+			<li class="box2" style="background-color: palegoldenrod;" draggable="true"></li>
+			
+			<li class="box2" style="background-color: powderblue;" draggable="true"></li>
+			<li class="box2"style="background-color: powderblue;" draggable="true"></li>
+			<li class="box2" style="background-color: powderblue;" draggable="true"></li>
+		</ul>
 		
 	<div class="box" style="background-color: palegoldenrod;"></div>
 	<div class="box" style="background-color: palevioletred;"></div>
@@ -33,10 +39,52 @@
 	<div class="box" style="background-color: mediumspringgreen;"></div>
 	<div class="box1"></div>
 	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
 	<script type="text/javascript">
 		var box=document.getElementsByClassName("box");
 		var box1=document.getElementsByClassName("box1")[0];
-		
+		var li=document.getElementsByClassName("box2");
+		var tmp=null;		
+			//开始
+			for(var i =0 ;i<li.length;i++){
+				li[i].ondragstart = function(){
+					console.log("开始");
+					tmp = this;
+				}
+			}
+			
+			// 结束
+			for(var i =0 ;i<li.length;i++){
+				li[i].ondragend = function(){
+					console.log("结束");
+				}
+			}
+			
+			//进入
+			box1.ondragenter = function(){
+				console.log("进入");
+				this.style.borderColor ="red";
+			}
+			
+//			// 悬停
+			box1.ondragover = function(e){
+				e.preventDefault();
+				console.log("悬停");
+		}
+			
+			// 离开
+			box1.ondragleave = function(){
+				console.log("离开");
+				this.style.borderColor ="black";
+			}
+			// 释放
+			box1.ondrop = function(){
+				console.log("释放");
+				this.style.borderColor ="black";
+			    tmp.setAttribute("draggable","false");
+			    this.appendChild(tmp);
+			}
+			
 		
 		
 		
